@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+@* CSIS3734 (2025) - Assignment 1 *@
+@* Bophelo Pharasi *@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Event Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/lib/twitter-bootstrap/css/bootstrap.min.css" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/styles/custom.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm border-bottom bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <i class="fas fa-calendar"></i>
+                Event Management System
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#MainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="MainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="Event"  class="nav-link">Home</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container p-3 bg-light">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="container border-top text-muted text-center">
+        <p>BK. Pharasi (2021561648)</p>
+        <p>
+            &copy; 2025 - UFS (Event Management System)
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script asp-src-include="/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

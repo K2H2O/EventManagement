@@ -1,0 +1,16 @@
+﻿@model EventManagementSystem.Models.Event
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<partial name="_EventDetails" model="@Model"></partial>
+
+<p>
+    @if (Model.EventMaxAttendees > Model.EventRegistration)
+    {
+        <a asp-controller="Attendee" asp-action="Register"
+           asp-route-eventId="@Model.EventID"
+           class="btn btn-primary">Register</a>
+    }
+    <a asp-action="Index" class="btn btn-outline-primary">Return to Home Page</a>
+</p> 

@@ -1,0 +1,22 @@
+﻿@model EventManagementSystem.Models.Event
+@{
+    ViewData["Title"] = "Attendee List";
+}
+
+
+
+<partial name="_EventDetails" model="@Model"></partial>
+
+<p>
+    <strong>List of attendees:</strong>
+    <br />
+
+    @foreach (var a in Model.Attendees)
+    {
+        <div>@a.AttendeeName (@a.AttendeeEmail)</div>
+    }
+</p>
+
+<p>
+    <a asp-action="Index" asp-controller="Event" class="btn btn-primary">Return to Home Page</a>
+</p>
